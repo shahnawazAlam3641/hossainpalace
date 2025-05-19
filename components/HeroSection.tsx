@@ -38,7 +38,7 @@ export default function HeroSection() {
     <section
       id="hero"
       // ref={heroRef}
-      className="h-screen relative flex items-center justify-center overflow-hidden"
+      className="h-screen relative flex items-center justify-center min-w-[100vw] max-w-[100vw] overflow-hidden"
     >
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
