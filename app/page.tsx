@@ -17,13 +17,13 @@ export default function Home() {
       <main className="relative">
         <Navbar />
         <HeroSection />
-        <AboutSection />
         <GallerySection />
         <PricingSection />
         <TestimonialsSection />
         <FAQSection />
         <CountdownTimer targetDate="2023-12-31T23:59:59" />
         <ContactSection />
+        <AboutSection />
         <Footer />
         <FloatingPriceBadge />
       </main>

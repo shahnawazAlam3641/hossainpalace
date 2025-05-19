@@ -89,7 +89,11 @@ export default function GallerySection() {
   };
 
   return (
-    <section id="gallery" ref={sectionRef} className="py-20 md:py-24 bg-black">
+    <section
+      id="gallery"
+      ref={sectionRef}
+      className="py-20 md:py-24 bg-black min-w-[100vw]"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"

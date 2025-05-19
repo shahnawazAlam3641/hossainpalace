@@ -60,7 +60,7 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-20 md:py-24 bg-ivory-light"
+      className="py-20 md:py-24 bg-ivory-light min-w-[100vw]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

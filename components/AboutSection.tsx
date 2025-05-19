@@ -35,7 +35,7 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-20 md:py-24 bg-ivory-light"
+      className="py-20 md:py-24 bg-ivory-light min-w-[100vw]"
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
