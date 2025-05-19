@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 240;
+  --background-end-rgb: 255, 255, 240;
+  --foreground: 0 0% 3.9%;
+  --background: 60 100% 97%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 47 65% 52%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 47 65% 52%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 47 65% 52%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+  --scroll-margin-top: 100px;
+}
+
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 47 65% 52%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 47 65% 52%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 47 65% 52%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .shimmer {
+    @apply bg-gradient-to-r from-transparent via-gold-light to-transparent bg-[length:400%_100%] animate-shimmer;
+  }
+  
+  .hero-heading {
+    @apply font-playfair text-4xl md:text-5xl lg:text-7xl font-bold leading-tight;
+  }
+  
+  .section-heading {
+    @apply font-playfair text-3xl md:text-4xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-gold;
+  }
+  
+  .luxury-btn {
+    @apply px-6 py-3 font-montserrat font-medium text-black-light bg-gold hover:bg-gold-dark transition-colors duration-300 rounded-sm;
+  }
+  
+  .luxury-btn-outline {
+    @apply px-6 py-3 font-montserrat font-medium text-gold bg-transparent border-2 border-gold hover:bg-gold/10 transition-colors duration-300 rounded-sm;
+  }
+  
+  .price-badge {
+    @apply bg-gold px-4 py-2 text-black-dark font-bold font-montserrat rounded-sm;
+  }
+  
+  .gallery-img {
+    @apply object-cover w-full h-full transition-transform duration-700 hover:scale-105;
+  }
+  
+  .parallax-container {
+    @apply overflow-hidden;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
